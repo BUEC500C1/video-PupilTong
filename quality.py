@@ -13,4 +13,6 @@ def ToRome(num):
             dig = dig.replace("2",rome[i*2+2])
             output=dig + output
             i=i+1
+    else:
+        raise Exception("illegal input!")
     return output
