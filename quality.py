@@ -5,7 +5,7 @@ def ToRome(num):
     output=""
     i = 0
     if(num<4000):
-        while(10**i<num):
+        while(10**i<=num):
             dig = int(num / (10**i)) % 10
             dig = pattern[dig]
             dig = dig.replace("0",rome[i*2])
