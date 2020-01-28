@@ -1,10 +1,10 @@
-def ToRome(num):
+def ToRome(num:int):
     pattern = ["","0","00","000","01","1","10","100","1000","02"]
     rome = ["I","V","X","L","C","D","M","",""]
     #num = int(input())
     output=""
     i = 0
-    if(num<4000):
+    if(num<4000 and num >0):
         while(10**i<=num):
             dig = int(num / (10**i)) % 10
             dig = pattern[dig]

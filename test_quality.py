@@ -1,4 +1,5 @@
-from quality import * 
+from quality import *
+import pytest 
 def test_ToRome():
     assert ToRome(1)=="I"
     assert ToRome(2)=="II"
@@ -21,3 +22,9 @@ def test_ToRome():
     assert ToRome(1437)=="MCDXXXVII"
     assert ToRome(1800)=="MDCCC"
     assert ToRome(3333)=="MMMCCCXXXIII"
+def test_illegal():
+    with pytest.raises(Exception) :
+        assert ToRome(-1)
+        assert ToRome(4000)
+        assert ToRome("illegal")
+        assert ToRome(-65536)
