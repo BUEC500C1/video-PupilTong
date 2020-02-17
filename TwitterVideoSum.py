@@ -46,7 +46,7 @@ class TwitterVideoSum:
         self.__count = self.__count - 1
     def GUI(self):
         while(self.__count!=0):
-            print("Current progress:" + str(len(self.__keywords) - self.__count) + "/" + str(len(self.__keywords)) + " | Current Keywords: ", end = '')
+            print("Current progress:" + str(len(self.__keywords) - self.__count + 1) + "/" + str(len(self.__keywords)) + " | Current Keywords: ", end = '')
             if(self.__videoApi!=None):
                 status = self.__videoApi.CheckStatus()
                 if(status[0]!= -1 ):
