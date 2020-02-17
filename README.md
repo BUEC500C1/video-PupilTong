@@ -57,9 +57,7 @@ video processing core
 ##### return
 return a unique uuid of this task.
 #### Method CheckStatus
-| Name  | Description | type |
-| ------------- | ------------- | ------------- |
-| uuid  | check the status of a specificaed task by uuid   | str |
+Check current task status.
 ##### return
 type: int
 ```python
