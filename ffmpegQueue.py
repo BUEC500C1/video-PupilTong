@@ -38,7 +38,7 @@ class VideoApi:
         self.__queue[uuid] = item
         threading.Thread(target=self.__Process__, args=(uuid,)).start()
         return uuid
-    def CheckStatus(self) -> list:
+    def CheckStatus(self,uuis:str) -> list:
         # 0 - unstart
         # 1~99 - processing
         # 100 - finished
