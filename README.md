@@ -35,6 +35,10 @@ on programm running, you may see something like this:
 Current progress:2/2 | Current Keywords: dogs|################    | 90%
 ```
 This means our program now is processing the 2nd hashtag, dogs, you gave, and it has finished 90% of whole workload.
+### Demo
+cats: https://youtu.be/trIAZ7TxWe0
+
+dogs: https://youtu.be/RZtzyB9p-WA
 ## Module ffmpegQueue.py
 This module is able to convert a tuple of texts and a tuple of images' url to a summary video.
 ### Architechture
