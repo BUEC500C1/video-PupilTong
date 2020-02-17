@@ -29,16 +29,16 @@ input video storage dir: .
 how many photos do u want: 10
 ```
 This means we are trying to search 10 tweets which is attached at least one photo for each hashtag, "#cats" or "#dogs, and tell the program where to store the summary video.
-### Demo
-cats: https://youtu.be/trIAZ7TxWe0
-
-dogs: https://youtu.be/RZtzyB9p-WA
 ### Gui shows progress
 on programm running, you may see something like this:
 ```bash
 Current progress:2/2 | Current Keywords: dogs|################    | 90%
 ```
 This means our program now is processing the 2nd hashtag, dogs, you gave, and it has finished 90% of whole workload.
+### Demo
+cats: https://youtu.be/trIAZ7TxWe0
+
+dogs: https://youtu.be/RZtzyB9p-WA
 ## Module ffmpegQueue.py
 This module is able to convert a tuple of texts and a tuple of images' url to a summary video.
 ### Architechture
