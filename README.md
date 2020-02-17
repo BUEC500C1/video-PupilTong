@@ -1,5 +1,4 @@
 # Twitter hashtag photo video summary generator
-## Example Code
 ## requirement
 python > 3.5
 ## Deployment Guide
@@ -39,6 +38,50 @@ This means our program now is processing the 2nd hashtag, dogs, you gave, and it
 ## Module ffmpegQueue.py
 This module is able to convert a tuple of texts and a tuple of images' url to a summary video.
 ### Architechture
+ ![Architechture](/photos/queue_arch.png)
+### Class queueItem
+One task of the work load pool
+#### Constructor Parameters
+| Name  | Description | type |
+| ------------- | ------------- | ------------- |
+| directory  | Output video storage directory  | str |
+| text  | List of texts  | tuple  |
+| img  | Images list for each text. Program will use the first as the background  | tuple  |
+| keyword  | keyword of this task, will use this to create a temp directory. Program will try to delete the directory first  | str  |
+### Class VideoApi
+video processing core
+#### Method AddTask
+| Name  | Description | type |
+| ------------- | ------------- | ------------- |
+| item  | the task to be added to the workload pool  | ququeItem |
+##### return
+return a unique uuid of this task.
+#### Method CheckStatus
+| Name  | Description | type |
+| ------------- | ------------- | ------------- |
+| uuid  | check the status of a specificaed task by uuid   | str |
+##### return
+type: int
+```python
+# 0 - unstart
+# 1~99 - processing
+# 100 - finished
+# -1 - deleted
+```
 ## Module TwitterVideoSum.py
-### Architechture
 This module is able to pull tweets from twitter with provided parmeters and prepare data for Module ffmpegQueue
+### Architechture
+ ![Architechture](/photos/tws_arch.png)
+### Class TwitterVideoSum:
+#### Constructor
+| Name  | Description | type |
+| ------------- | ------------- | ------------- |
+| consumer_key  | twitter api key  | str |
+| consumer_secret  | twitter api key  | str |
+| access_token  | twitter api key  | str |
+| access_token_secret  | twitter api key  | str |
+| keywords  | List of hashtags  | tuple  |
+| directory  | video storage directory  | str  |
+| item  | number of photos for each hashtag to be converted  | str  |
+#### Method Start
+Start the process
