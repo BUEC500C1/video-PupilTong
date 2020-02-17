@@ -29,6 +29,10 @@ input video storage dir: .
 how many photos do u want: 10
 ```
 This means we are trying to search 10 tweets which is attached at least one photo for each hashtag, "#cats" or "#dogs, and tell the program where to store the summary video.
+### Demo
+cats: https://youtu.be/trIAZ7TxWe0
+
+dogs: https://youtu.be/RZtzyB9p-WA
 ### Gui shows progress
 on programm running, you may see something like this:
 ```bash
