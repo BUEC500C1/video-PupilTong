@@ -17,6 +17,7 @@ class TwitterVideoSum:
         self.__item = item
         self.__videoApi = None
         self.__count = len(self.__keywords)
+        self.__queueCounter = 0
         pass
     def Start(self):
         threading.Thread(target=self.GUI, args=()).start()
@@ -41,9 +42,14 @@ class TwitterVideoSum:
                 if(i==self.__item):
                     break
             qitem = queueItem(self.__directory,tuple(keywordsTweetsText),tuple(keywordsTweetsImgs),self.CallbackHandler,keyword)
+            while(self.__queueCounter>4):
+                pass
             self.__videoApi.AddTask(qitem)
+            self.__queueCounter = self.__queueCounter + 1
+
     def CallbackHandler(self):
         self.__count = self.__count - 1
+        self.____queueCounter = self.__queueCounter - 1
     def GUI(self):
         while(self.__count!=0):
             print("Current progress:" + str(len(self.__keywords) - self.__count + 1) + "/" + str(len(self.__keywords)) + " | Current Keywords: ", end = '')
