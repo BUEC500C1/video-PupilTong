@@ -7,7 +7,7 @@ import shutil
 import subprocess 
 
 class queueItem:
-    __status__ : int = 0
+    __status__ = 0
     keyword:str = ""
     directory :str = ""        
     callback = None
