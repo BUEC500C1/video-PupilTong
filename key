@@ -1,9 +1,0 @@
-
-
-consumer_key:str = "67uYIbVcEhpag2PihdsE3ya3X"
-
-consumer_secret:str = "aM2PRRGnJiURNvh1RqjHgZoKTwFz3EeEC8VaA7s4gb05zQ7o7l"
-
-access_token:str = "1171532610805227520-2Fqr70ZYcMsKPpx7bz9ItuKZGWixYC"
-
-access_token_secret:str = "cXEleh5ZOXgIahgVg7Z4hPSM6mHb3C8OG1QlB22aX6e0S"
